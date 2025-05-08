@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Libros</title>
+  <style>
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista de Libros</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Género</th>
+        <th> link</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for libro in libros %}
+        <tr>
+          <td>{{ libro.titulo }}</td>
+          <td>{{ libro.autor }}</td>
+          <td>{{ libro.genero }}</td>
+          <td>{{ libro.link }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
